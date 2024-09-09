@@ -14,5 +14,5 @@ data class EntryModel(
     val address: String,
 ) :Serializable{
     @PrimaryKey(autoGenerate = true)
-    var taskId: Int = 0
+    var id: Int = 0
 }

@@ -22,7 +22,7 @@ import com.eka.care.task.navigation.navigateTo
 
 
 @Composable
-fun SplashScreen(mainNavyController: NavHostController) {
+fun SplashScreen(finish: ()->Unit) {
     val scale = remember {
         Animatable(0f)
     }
@@ -39,8 +39,7 @@ fun SplashScreen(mainNavyController: NavHostController) {
 
 
 //        mainNavyController.navigate("details_screen/hello my friend")
-
-        mainNavyController.navigateTo(Screens.EntryList, finish = true)
+        finish()
 //        mainNavyController.navigate(RonConstants.Routs.MainScreen) {
 //            popUpTo(RonConstants.Routs.splashScreen) {
 //                inclusive = false

@@ -33,7 +33,7 @@ interface EntryDao {
 
 
     // Second Way
-    @Query("DELETE FROM EntryModel WHERE taskId == :taskId")
+    @Query("DELETE FROM EntryModel WHERE id == :taskId")
     suspend fun deleteTaskUsingId(taskId: String): Int
 
 
